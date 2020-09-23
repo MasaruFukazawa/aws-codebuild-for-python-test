@@ -8,8 +8,12 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install -r requirements.txt
+  post_build:
+    commands:
+      - pep8 ./src
+      - flake8 ./src
+      - pytest ./src
 artifacts:
   files:
     - '**/*'
   name: myname-$(date +%Y-%m-%d) 
-      
