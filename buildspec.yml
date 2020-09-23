@@ -11,8 +11,8 @@ phases:
       - pip install -r requirements.txt
   post_build:
     commands:
-      - pycodestyle src
-      - flake8 src
+#      - pycodestyle src
+#      - flake8 src
       - pytest src
 artifacts:
   files:
