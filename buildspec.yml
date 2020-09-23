@@ -11,9 +11,15 @@ phases:
       - pip install -r requirements.txt
   post_build:
     commands:
+      - echo "# Start pycodestyle ###"
       - python -m pycodestyle src
+      - echo "# End pycodestyle ###"
+      - echo "# Start flake8 ###"
       - python -m flake8 src
+      - echo "# End flake8 ###"
+      - echo "# Start pytest ###"
       - python -m pytest
+      - echo "# End pytest ###"
 artifacts:
   files:
     - '**/*'
