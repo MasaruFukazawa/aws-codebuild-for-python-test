@@ -13,7 +13,7 @@ phases:
     commands:
 #      - pycodestyle src
 #      - flake8 src
-      - pytest src
+      -  python -m pytest
 artifacts:
   files:
     - '**/*'
