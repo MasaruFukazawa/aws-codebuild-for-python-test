@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - pip install --upgrade pip
-      - pip install < requirements.txt
+      - pip install -r requirements.txt
 artifacts:
   files:
     - '**/*'
