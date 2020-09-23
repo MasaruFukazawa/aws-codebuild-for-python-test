@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from culc import add # noqa
+from .culc import add # noqa
