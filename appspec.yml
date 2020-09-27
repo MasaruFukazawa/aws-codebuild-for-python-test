@@ -1,6 +1,10 @@
 version: 0.0
 os: linux
 hooks:
+  ApplicationStop
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
